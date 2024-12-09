@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "정보디자인_4조_따릉이Hotspot분석.html",
+            "use": "@vercel/static"
+        }
+    ]
+}

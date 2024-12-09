@@ -141,7 +141,7 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3.v3.js"></script>
     
-    <script src="./colorbrewer.js" type="text/JavaScript"></script>
+    <script src="./src/colorbrewer.js" type="text/JavaScript"></script>
 
     <script>
     var global_name= "합계";//마우스클릭할 때, 변경되는 값 저장
@@ -164,7 +164,7 @@
     var path = d3.geo.path().projection(projection);
   
     
-    d3.json("./data/seoul_municipalities_topo_simple.json", function(error, data) {
+    d3.json("./src/data/seoul_municipalities_topo_simple.json", function(error, data) {
     var features = topojson.feature(data, data.objects.seoul_municipalities_geo).features;
 
     map.selectAll("path")
@@ -217,7 +217,7 @@ var Tooltip = d3.select("body")
   
 
 // 지도에 점 찍기 place1
-d3.csv("./data/newplace.csv", function(data) {
+d3.csv("./src/data/newplace.csv", function(data) {
   places.selectAll("circle")
       .data(data)
     .enter().append("circle").attr('id', 'map_circle')
@@ -267,7 +267,7 @@ d3.select("#right_chart").attr("width", 600).attr("height", 500);
                 .innerRadius(40) 
                 .outerRadius(r);
       
-       d3.csv("./data/age_pie.csv",function(data){
+       d3.csv("./src/data/age_pie.csv",function(data){
         data2 = data.filter(p => p.name ==global_name);//클릭된 대여소의 정보를 가져올 수 있도록
 
         var pie = d3.layout.pie()
@@ -341,7 +341,7 @@ d3.select("#right_chart").attr("width", 600).attr("height", 500);
               .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis-noworktime"); });
   
         var heatmapChart = function() {
-          d3.csv("./data/top10_요일별_시간대별_이용건수_heatmap.csv", function(data) {
+          d3.csv("./src/data/top10_요일별_시간대별_이용건수_heatmap.csv", function(data) {
             data2 = data.filter(p => p.place ==global_name); //클릭된 대여소의 정보가 나타나도록 처리
   
           // 툴팁 생성 (히트맵에서 각 네모에 해당하는 요일과 시간, 이용량 정보를 제공)
@@ -425,7 +425,7 @@ d3.select("#right_chart").attr("width", 600).attr("height", 500);
       "translate(" + 0+ "," + 10 + ")");
 
         //데이터 읽기
-        d3.csv("./data/rank.csv", function(data) {
+        d3.csv("./src/data/rank.csv", function(data) {
 
         // x축 스케일
         var x = d3.scale.linear()
@@ -555,7 +555,7 @@ function radiusFn(d) {
 }
 
 //데이터 읽기
-d3.json("./data/miserables.json", function(error, graph) {
+d3.json("./src/data/miserables.json", function(error, graph) {
   if (error) throw error;
 
   var link =svg_network.append("g")
