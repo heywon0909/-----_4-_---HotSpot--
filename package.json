@@ -4,7 +4,7 @@
   "private": true,
   "staticPath": [
     {
-      "staticPath": "static",
+      "staticPath": "static/data",
       "staticOutDir": "static"
     }
   ],
