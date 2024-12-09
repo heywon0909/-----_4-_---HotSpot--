@@ -28,7 +28,7 @@
 1. JavaScript
 2. D3: 데이터를 시각화하는데 사용
 3. data: json, csv 데이터 파일 사용
-
+4. percel: entry point가 html 파일이므로 percel로 번들러 사용 
 
 ### 참여도
 
