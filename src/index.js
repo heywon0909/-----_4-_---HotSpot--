@@ -1,4 +1,6 @@
-import data from './data/seoul_municipalities_topo_simple.json';
+// import data from './data/seoul_municipalities_topo_simple.json';
+
+
 var global_name = "합계";//마우스클릭할 때, 변경되는 값 저장
 
 ///차트 1: 서울 지도 ///
@@ -19,7 +21,8 @@ var global_name = "합계";//마우스클릭할 때, 변경되는 값 저장
     var path = d3.geo.path().projection(projection);
   
     
-    d3.json(data, function(error, data) {
+d3.json('/data/seoul_municipalities_topo_simple.json', function (error, data) {
+    
     var features = topojson.feature(data, data.objects.seoul_municipalities_geo).features;
 
     map.selectAll("path")
@@ -72,9 +75,9 @@ var Tooltip = d3.select("body")
   
 
 // 지도에 점 찍기 place1
-d3.csv("./src/data/newplace.csv", function(data) {
+d3.csv("./data/newplace.csv", function(data) {
   places.selectAll("circle")
-      .data(data)
+      .data(newplace)
     .enter().append("circle").attr('id', 'map_circle')
       .attr("cx", function(d) { return projection([d.lon, d.lat])[0]; })
       .attr("cy", function(d) { return projection([d.lon, d.lat])[1]; })
@@ -122,7 +125,7 @@ d3.select("#right_chart").attr("width", 600).attr("height", 500);
                 .innerRadius(40) 
                 .outerRadius(r);
       
-       d3.csv("./src/data/age_pie.csv",function(data){
+       d3.csv("./data/age_pie.csv",function(data){
         data2 = data.filter(p => p.name ==global_name);//클릭된 대여소의 정보를 가져올 수 있도록
 
         var pie = d3.layout.pie()
@@ -407,7 +410,7 @@ function radiusFn(d) {
 }
 
 //데이터 읽기
-d3.json("./src/data/miserables.json", function(error, graph) {
+d3.json('data/miserables.json', function(error, graph) {
   if (error) throw error;
 
   var link =svg_network.append("g")
