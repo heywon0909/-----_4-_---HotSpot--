@@ -136,12 +136,11 @@
     <svg id="network_chart"></svg>
 
   
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3.v3.js"></script>
+   <script src="https://d3js.org/d3.v3.min.js"></script>
+   <script src="https://d3js.org/topojson.v1.min.js"></script>
     
     <script src="./colorbrewer.js" type="text/JavaScript"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
     <!-- <script src="./index.js" type="module"></script> -->
     <script>
     var global_name= "합계";//마우스클릭할 때, 변경되는 값 저장
@@ -517,12 +516,6 @@ d3.select("#right_chart").attr("width", 600).attr("height", 500);
             .style("text-size", "20px");
 
   });
-
-</script>
-<script src="https://d3js.org/d3.v4.js"></script>
-
-<script>
-
   ///차트5 : 네트워크 시각화 ///
   // 버블차트와 연동하여 클릭시 해당 대여소가 강조되게 구현하고자 하였으나, d3.v4.js파일을 포함하면서 앞의 스크립트와 합치게 되면//
   //히트맵이 시작화면에서 정상 작동하지 않아 네트워크는 버블차트의 클릭 동작수행에서 제외
