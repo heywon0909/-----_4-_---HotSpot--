@@ -2,6 +2,10 @@
   "description": "따릉이 시각화",
   "source": "./src/index.html",
   "private": true,
+  "staticFiles": {
+    "staticPath": "static",
+    "staticOutDir": "static"
+  },
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"
