@@ -81,7 +81,7 @@
     margin: tooltip-margin;
     /* Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element. */
     /* So reset our font and text properties to avoid inheriting weird values. */
-    @include reset-text();
+    /* @include reset-text(); */
     font-size: tooltip-font-size;
     /*  Allow breaking very long words so they don't overflow the tooltip's bounds */
     word-wrap: break-word;
@@ -141,7 +141,7 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3.v3.js"></script>
     
-    <script src="./colorbrewer.js" type="text/JavaScript"></script>
+    <script src="./src/colorbrewer.js" type="text/JavaScript"></script>
 
     <script>
     var global_name= "합계";//마우스클릭할 때, 변경되는 값 저장
@@ -164,7 +164,7 @@
     var path = d3.geo.path().projection(projection);
   
     
-    d3.json("./data/seoul_municipalities_topo_simple.json", function(error, data) {
+    d3.json("/data/seoul_municipalities_topo_simple.json", function(error, data) {
     var features = topojson.feature(data, data.objects.seoul_municipalities_geo).features;
 
     map.selectAll("path")
