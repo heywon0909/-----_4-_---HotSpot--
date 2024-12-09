@@ -27,4 +27,17 @@
 
 1. JavaScript
 2. D3: 데이터를 시각화하는데 사용
-3. data: json, csv 데이터 파일 사용 
+3. data: json, csv 데이터 파일 사용
+
+
+### 참여도
+
+박혜원(40%)
+1. #HotSpot은 어디!? 언제!? 누구에게!? 에서 서울 지도 차트 시각화를 담당
+  ![image](https://github.com/user-attachments/assets/8ff53a12-4714-4181-a638-141da39ce218)
+<br/>
+
+2. 따릉이 HotSpot에서의 이동 차트 시각화를 담당 
+   
+   ![image](https://github.com/user-attachments/assets/a0d0948f-c3ef-4098-9325-b05ef3232777)
+
