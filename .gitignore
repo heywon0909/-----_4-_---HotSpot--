@@ -1,3 +1,5 @@
 /d3.v3.min.js
 .vercel
 node_modules
+.parcel-cache/
+dist
