@@ -31,7 +31,7 @@
 4. Parcel: entry point가 html 파일이므로 percel로 번들러 사용
 
 
-### 추가 작업
+### 추가 작업(2024)
 1. entry point 가 html 파일이므로 Parcel 활용하여 build 진행
    - Parcel 관련 빌드 설정 구축
 2. css,js 파일 분리
