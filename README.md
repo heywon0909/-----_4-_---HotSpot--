@@ -28,7 +28,17 @@
 1. JavaScript
 2. D3: 데이터를 시각화하는데 사용
 3. data: json, csv 데이터 파일 사용
-4. percel: entry point가 html 파일이므로 percel로 번들러 사용 
+4. Parcel: entry point가 html 파일이므로 percel로 번들러 사용
+
+
+### 추가 작업
+1. entry point 가 html 파일이므로 Parcel 활용하여 build 진행
+   - Parcel 관련 빌드 설정 구축
+2. css,js 파일 분리
+3. 디자인 수정
+4. 각 통계구분에 따른 화면 분리
+5. 동작하지 않는 기능 수정  
+
 
 ### 참여도
 
